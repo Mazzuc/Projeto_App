@@ -11,17 +11,29 @@
         android:layout_width="wrap_content"
         android:layout_height="70dp"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="14dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="200dp"
         android:orientation="horizontal"
         android:padding="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/facalogin"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background="@drawable/bg_edit" />
+            android:padding="12dp"
+            android:background="@drawable/bg_edit">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/arrow" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="20dp"
@@ -32,10 +44,11 @@
             app:cardElevation="0dp" />
 
         <TextView
-            android:layout_marginTop="20dp"
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_medium"
             android:text="Inscreva-se"
             android:textColor="@color/white"
             android:textSize="20dp"
@@ -49,9 +62,11 @@
         android:id="@+id/facalogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="30dp"
+        android:fontFamily="@font/outifit"
         android:text="Inscreva-se com uma das seguintes opções:"
         android:textColor="@color/cinza_medio"
+        android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,6 +76,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="80dp"
+        android:layout_marginStart="-4dp"
         android:layout_marginTop="20dp"
         android:background="@color/black"
         android:orientation="horizontal"
@@ -79,9 +95,34 @@
             app:cardElevation="0dp">
 
             <ImageView
+                android:id="@+id/icone4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/google" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="20dp"
+            android:layout_height="70dp"
+            android:background="@color/black"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            app:cardElevation="0dp" />
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:background="@drawable/bd_card_cinza"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            app:cardElevation="0dp" >
+
+            <ImageView
                 android:id="@+id/icone"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/face" />
         </LinearLayout>
 
         <LinearLayout
@@ -98,37 +139,7 @@
             android:background="@drawable/bd_card_cinza"
             android:orientation="horizontal"
             android:padding="15dp"
-            app:cardElevation="0dp">
-
-            <ImageView
-                android:id="@+id/icone2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/logotcc" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="20dp"
-            android:layout_height="70dp"
-            android:background="@color/black"
-            android:orientation="horizontal"
-            android:paddingLeft="20dp"
             app:cardElevation="0dp" />
-
-        <LinearLayout
-            android:layout_width="100dp"
-            android:layout_height="60dp"
-            android:background="@drawable/bd_card_cinza"
-            android:orientation="horizontal"
-            android:padding="15dp"
-            app:cardElevation="0dp">
-
-            <ImageView
-                android:id="@+id/icone3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/logverde" />
-        </LinearLayout>
     </LinearLayout>
 
     <TextView
@@ -138,15 +149,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/outifit"
         android:text="Nome"
         android:textColor="@color/cinza_medio"
+        android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <EditText
-        android:textColor="@color/white"
         android:id="@+id/editNome"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -158,7 +170,9 @@
         android:hint="Digite seu nome..."
         android:inputType="textEmailAddress"
         android:padding="14dp"
+        android:textColor="@color/white"
         android:textColorHint="@color/cinza_medio"
+        android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -170,15 +184,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/outifit"
         android:text="E-mail"
         android:textColor="@color/cinza_medio"
+        android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editNome" />
 
     <EditText
-        android:textColor="@color/white"
         android:id="@+id/editEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -190,7 +205,9 @@
         android:hint="Digite seu e-mail..."
         android:inputType="textEmailAddress"
         android:padding="14dp"
+        android:textColor="@color/white"
         android:textColorHint="@color/cinza_medio"
+        android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/terhrh" />
@@ -203,13 +220,13 @@
         android:layout_marginTop="16dp"
         android:text="Senha"
         android:textColor="@color/cinza_medio"
+        android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editEmail" />
 
     <EditText
-        android:textColor="@color/white"
         android:id="@+id/editsenha"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -221,7 +238,9 @@
         android:hint="Digite sua senha..."
         android:inputType="textPassword"
         android:padding="14dp"
+        android:textColor="@color/white"
         android:textColorHint="@color/cinza_medio"
+        android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/terhrrh" />
@@ -232,15 +251,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/outifit"
         android:text="Confirmar Senha"
         android:textColor="@color/cinza_medio"
+        android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editsenha" />
 
     <EditText
-        android:textColor="@color/white"
         android:id="@+id/editconfirmarsenha"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -252,7 +272,9 @@
         android:hint="Digite sua senha..."
         android:inputType="textPassword"
         android:padding="14dp"
+        android:textColor="@color/white"
         android:textColorHint="@color/cinza_medio"
+        android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/terrh" />
@@ -271,9 +293,10 @@
 
         <TextView
             android:id="@+id/facalo4gin"
-            android:layout_width="130dp"
+            android:layout_width="125dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
+            android:layout_marginLeft="20dp"
             android:text="Já tem uma conta?"
             android:textColor="@color/cinza_medio"
             app:layout_constraintEnd_toEndOf="parent"
@@ -318,7 +341,7 @@
         android:text="Criar Conta"
         android:textAllCaps="false"
         android:textColor="@color/black"
-        android:textSize="18dp"
+        android:textSize="16dp"
         app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
