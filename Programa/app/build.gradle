@@ -50,4 +50,6 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     implementation 'com.google.firebase:firebase-storage:16.0.1'
 
+    //Scanner
+    implementation 'com.bundiyev.android:code-scanner:2.1.0'
 }
