@@ -51,5 +51,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-storage:16.0.1'
 
     //Scanner
-    implementation 'com.bundiyev.android:code-scanner:2.1.0'
+    implementation 'com.budiyev.android:code-scanner:2.1.0'
 }

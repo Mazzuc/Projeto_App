@@ -7,9 +7,10 @@
     android:layout_margin="10dp"
     tools:context=".ScannerActivity">
 
-    <com.budiyev.android.codescanner.CodeScannerView
+<com.budiyev.android.codescanner.CodeScannerView
         android:id="@id/scanner_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        ></com.budiyev.android.codescanner.CodeScannerView>
+        android:layout_height="match_parent">
+
+</com.budiyev.android.codescanner.CodeScannerView>
 </FrameLayout>
