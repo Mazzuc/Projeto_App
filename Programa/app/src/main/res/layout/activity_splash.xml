@@ -9,9 +9,9 @@
 
     <ImageView
         android:id="@+id/logverde"
-        android:layout_width="120dp"
-        android:layout_height="80dp"
-        android:background="@drawable/logotcc"
+        android:layout_width="172dp"
+        android:layout_height="105dp"
+        android:background="@drawable/logobranca"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

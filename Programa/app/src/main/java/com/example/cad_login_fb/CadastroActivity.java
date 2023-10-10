@@ -36,52 +36,53 @@ public class CadastroActivity extends AppCompatActivity {
         binding.btnCriarConta.setOnClickListener(v -> ValidaDados());
     }
 
-    private void ValidaDados(){
+    private void ValidaDados() {
 
-    String email = binding.editEmail.getText().toString().trim();
-    String senha = binding.editsenha.getText().toString().trim();
+        String email = binding.editEmail.getText().toString().trim();
+        String senha = binding.editsenha.getText().toString().trim();
 
-    //Se o email não foi vazio (isEmpty)
+        //Se o email não foi vazio (isEmpty)
 
-    if(!email.isEmpty()){
-        if(!senha.isEmpty()){
+        if (!email.isEmpty()) {
+            if (!senha.isEmpty()) {
 
-            binding.progressBar.setVisibility(View.VISIBLE);
+                binding.progressBar.setVisibility(View.VISIBLE);
 
-            CriarContaFireBase(email, senha);
-        } else{
-            Toast.makeText(this, "Informe uma senha", Toast.LENGTH_SHORT).show();
+                CriarContaFireBase(email, senha);
+            } else {
+                Toast.makeText(this, "Informe uma senha", Toast.LENGTH_SHORT).show();
 
+            }
+
+        } else {
+
+            Toast.makeText(this, "Informe seu E-mail", Toast.LENGTH_SHORT).show();
         }
 
-        } else{
-
-    Toast.makeText(this, "Informe seu E-mail", Toast.LENGTH_SHORT).show();
-    }
-
 
     }
 
-    private void CriarContaFireBase(String email, String senha ){
-    mAuth.createUserWithEmailAndPassword(
-            email,senha
-    ).addOnCompleteListener(task -> {
+    private void CriarContaFireBase(String email, String senha) {
+        mAuth.createUserWithEmailAndPassword(
+                email, senha
+        ).addOnCompleteListener(task -> {
 
-        // Se o cadastro ocorreu com sucesso
-        if(task.isSuccessful()){
+            // Se o cadastro ocorreu com sucesso
+            if (task.isSuccessful()) {
 
-            //como deu certo, será levado para home
-            finish();
-            startActivity(new Intent(this, MainActivity.class));
+                //como deu certo, será levado para home
+                finish();
+                startActivity(new Intent(this, HomeActivity.class));
 
-        }
-        // Ocorreu erro, recebe:
-        else{
+            }
+            // Ocorreu erro, recebe:
+            else {
 
-            binding.progressBar.setVisibility(View.GONE);
-            Toast.makeText(this, "Opa, verifique as informações: ocorreu um erro.", Toast.LENGTH_SHORT).show();
+                binding.progressBar.setVisibility(View.GONE);
+                Toast.makeText(this, "Opa, verifique as informações: ocorreu um erro.", Toast.LENGTH_SHORT).show();
 
-        }
-    });
+            }
+        });
     }
-    }
+}
+

@@ -73,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 //como deu certo, será levado para home
                 finish();
-                startActivity(new Intent(this, MainActivity.class));
+                startActivity(new Intent(this, HomeActivity.class));
 
             }
             // Ocorreu erro, recebe:

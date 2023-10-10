@@ -4,17 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingLeft="27dp"
+    android:paddingRight="22dp"
+    android:paddingTop="15dp"
     tools:context=".RecuperarContaActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/toolbar3"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="-14dp"
         android:layout_marginTop="20dp"
         android:orientation="horizontal"
         android:padding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -22,8 +26,14 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/bg_edit"
-            app:backgroundTint="@null">
+            android:padding="12dp">
 
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/arrow" />
         </LinearLayout>
 
         <LinearLayout
@@ -41,50 +51,56 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
             android:text="Recuperação de Senha"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     </androidx.appcompat.widget.Toolbar>
 
     <TextView
         android:id="@+id/terrh"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="5dp"
+        android:fontFamily="@font/outifit"
         android:text="Informe seu e-mail cadastrado e você receberá um link para alterar a senha."
-        android:textColor="@android:color/darker_gray"
+        android:textColor="@color/cinza_medio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3" />
 
     <TextView
         android:id="@+id/terhrh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/outifit"
         android:text="E-mail"
-        android:textColor="@android:color/darker_gray"
+        android:textColor="@color/cinza_medio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.01"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/terrh" />
 
     <EditText
         android:id="@+id/editEmail"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="5dp"
         android:background="@drawable/bg_edit"
         android:ems="10"
         android:hint="Digite seu e-mail..."
         android:inputType="textEmailAddress"
         android:padding="14dp"
-        android:textColorHint="@android:color/darker_gray"
+        android:textColor="@color/white"
+        android:textColorHint="@color/cinza_medio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/terhrh" />
@@ -105,18 +121,20 @@
 
     <Button
         android:id="@+id/btnRecuperarConta"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="350dp"
         android:background="@drawable/btn_button"
+        android:fontFamily="@font/poppins_medium"
         android:padding="10dp"
         android:text="Recuperar Senha"
         android:textAllCaps="false"
         android:textColor="@color/black"
+        android:textSize="15dp"
         app:backgroundTint="@null"
-        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editEmail" />
