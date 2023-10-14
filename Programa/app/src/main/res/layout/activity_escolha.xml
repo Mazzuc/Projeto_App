@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".EscolhaActivity">
 
     <TextView
@@ -115,19 +116,19 @@
                 android:layout_width="55dp"
                 android:layout_height="55dp"
                 android:layout_marginLeft="60dp"
-                android:layout_marginRight="10dp"
-                android:paddingTop="3dp"
-                android:paddingRight="15dp"
-                android:paddingLeft="15dp"
                 android:layout_marginTop="08dp"
-                android:background="@drawable/bg_redondo_cinza">
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_redondo_cinza"
+                android:paddingLeft="15dp"
+                android:paddingTop="3dp"
+                android:paddingRight="15dp">
 
                 <ImageView
                     android:id="@+id/imageView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
                     app:srcCompat="@drawable/arrowgreen" />
 
             </LinearLayout>
@@ -168,19 +169,19 @@
                 android:layout_width="53dp"
                 android:layout_height="53dp"
                 android:layout_marginLeft="56dp"
-                android:layout_marginRight="10dp"
                 android:layout_marginTop="09dp"
-                android:paddingTop="3dp"
-                android:paddingRight="15dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_redondo_verde"
                 android:paddingLeft="15dp"
-                android:background="@drawable/bg_redondo_verde">
+                android:paddingTop="3dp"
+                android:paddingRight="15dp">
 
                 <ImageView
                     android:id="@+id/imageView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
                     app:srcCompat="@drawable/arrowblack" />
             </LinearLayout>
         </LinearLayout>

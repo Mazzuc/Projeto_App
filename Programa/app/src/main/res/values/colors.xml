@@ -23,6 +23,7 @@
     //Home (Cards)
     <color name="cinzacard">#171616</color>
     <color name="branco">#FFFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
 
 
 </resources>
